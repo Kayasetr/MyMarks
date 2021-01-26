@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <item android:title="Профиль">
+        <menu>
+            <item
+                android:id="@+id/itemOtherGr"
+                android:title="Другие группы"
+                android:icon="@drawable/ic_group_black_24dp"
+                />
+            <item
+                android:id="@+id/itemExit"
+                android:title="Выйти"
+                android:icon="@drawable/ic_icon_exit"
+                />
+        </menu>
+    </item>
+    <item android:title="Приложение">
+        <menu>
+            <item
+                android:id="@+id/itemSettings"
+                android:title="Настройки"
+                android:icon="@drawable/ic_settings_black_24dp"
+                />
+            <item
+                android:id="@+id/itemAboutApp"
+                android:title="О приложении"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                />
+        </menu>
+    </item>
+
+
+</menu>
+

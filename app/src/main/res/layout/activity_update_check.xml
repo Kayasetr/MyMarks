@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateCheck">
+    <TextView
+        android:id="@+id/tvUpdate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Доступно обновление!"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        />
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Обновить"
+        android:textColor="@color/colorBackground3"
+        android:background="@drawable/mybutton_kek"
+        android:textAllCaps="false"
+        android:layout_marginTop="160dp"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/walls"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:dialogTitle="Выберите тему"
+        android:entries="@array/settings_list_preference_titles"
+        android:entryValues="@array/settings_list_preference_values"
+        android:key="list"
+        android:summary=""
+        android:defaultValue="3"
+        android:title="Тема" />
+    <SwitchPreference
+        android:key="switch_Anim_Bg"
+        android:title="Анимационный фон"
+        android:summary="Вкл/выкл анимационный фон"
+        android:defaultValue="true"/>
+    <SwitchPreference
+        android:key="switch_Auto_Login"
+        android:title="Авто вход"
+        android:summary="Автоматический вход в приложение без ввода логина"
+        android:defaultValue="true"/>
+
+</PreferenceScreen>

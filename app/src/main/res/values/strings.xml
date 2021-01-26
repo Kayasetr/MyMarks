@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Marks</string>
+    <string name="navigation_drawer_open">Открыть навигационный бар</string>
+    <string name="navigation_drawer_close">Закрыть навигационный бар</string>
+
+    <string-array name="settings_list_preference_titles">
+        <item>Светлая тема</item>
+        <item>Темная тема</item>
+        <item>Автоматическая смена темы</item>
+    </string-array>
+    <string-array name="settings_list_preference_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="preference_Auto_DarkTheme_title">Автоматическая смена темы</string>
+    <string name="preference_Auto_DarkTheme_summary">С 7 До 20 светлая тема, с 20 до 7 темная тема</string>
+
+    <string name="preference_DarkTheme_title">Темная тема</string>
+    <string name="preference_DarkTheme_summary">Вкл/выкл темную тема</string>
+
+    <string name="preference_Anim_Bg_title">Анимационный фон</string>
+    <string name="preference_Anim_Bg_summary">Вкл/выкл анимационный фон</string>
+</resources>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdministratorActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/bgAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgday" />
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardViewAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.85"
+                    android:layout_marginHorizontal="10dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+                        <Spinner
+                            android:id="@+id/adminSpinnerMgrs"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:spinnerMode="dialog"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+                            <EditText
+                                android:id="@+id/editSearchStud"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="3dp"
+                                android:layout_weight="0.8"
+                                android:textColor="@android:color/black"
+                                android:textColorHint="@android:color/darker_gray"
+                                android:background="@drawable/edittext_style"
+                                android:hint="Поиск студента по коду"
+                                android:inputType="textCapWords"
+                                android:layout_gravity="center"
+                                android:padding="8dp"
+                                />
+                           <ImageButton
+                               android:id="@+id/adminSearchBtn"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:padding="8dp"
+                               android:layout_gravity="center"
+                               android:tint="@color/colorAccent1"
+                               android:src="@drawable/ic_search_black_24dp"
+                               android:layout_margin="3dp"
+                               android:background="@drawable/button_style"
+                               android:foreground="?android:attr/selectableItemBackground" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/studentId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ID студента:"
+                                android:layout_margin="3dp"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:id="@+id/studentName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:text="Имя студента:"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:id="@+id/studentLogin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:text="Логин студента:"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:id="@+id/groupId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ID группы студента:"
+                                android:layout_margin="3dp"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:id="@+id/groupName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:text="Группа студента:"
+                                android:textSize="16sp"
+                                />
+                            <TextView
+                                android:id="@+id/studentStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:text="Статус студента:"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                />
+                            <Button
+                                android:id="@+id/makeMngrBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_margin="3dp"
+                                android:text="Сделать менеджером"
+                                android:paddingHorizontal="5dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:background="@drawable/button_style"
+                                android:textColor="@android:color/white"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardViewManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.85"
+                    android:layout_marginHorizontal="10dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:orientation="vertical">
+                        <Spinner
+                            android:id="@+id/adminSpinnerGroups"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:spinnerMode="dialog"/>
+                        <Spinner
+                            android:id="@+id/spinnerNameInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:spinnerMode="dropdown"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+                            <EditText
+                                android:id="@+id/nameInpField"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="3dp"
+                                android:layout_weight="0.8"
+                                android:scrollHorizontally="true"
+                                android:textColor="@android:color/black"
+                                android:textColorHint="@android:color/darker_gray"
+                                android:background="@drawable/edittext_style"
+                                android:hint="Имя студента"
+                                android:inputType="textCapWords"
+                                android:layout_gravity="center"
+                                android:padding="8dp" />
+                            <EditText
+                                android:id="@+id/markInpField"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.2"
+                                android:layout_gravity="center"
+                                android:layout_margin="3dp"
+                                android:textColorHint="@android:color/darker_gray"
+                                android:textColor="@android:color/black"
+                                android:background="@drawable/edittext_style"
+                                android:hint="Балл"
+                                android:textAlignment="center"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:padding="8dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+                            <Spinner
+                                android:id="@+id/spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:spinnerMode="dialog"/>
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/addButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/button_style"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:textColor="@android:color/white"
+                            android:layout_margin="3dp"
+                            android:textSize="18sp"
+                            android:text="Добавить в базу"
+                            android:textAllCaps="false"
+                            android:layout_gravity="center_horizontal"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+                            <Button
+                                android:id="@+id/studOutButton"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/button_style"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:textSize="18sp"
+                                android:textColor="@android:color/white"
+                                android:layout_margin="3dp"
+                                android:text="Обновить список"
+                                android:textAllCaps="false"
+                                android:layout_gravity="center_horizontal"/>
+                            <Button
+                                android:id="@+id/studRefreshButton"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/button_style"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:textSize="18sp"
+                                android:textColor="@android:color/white"
+                                android:layout_margin="3dp"
+                                android:text="Обнулить предметы"
+                                android:textAllCaps="false"
+                                android:layout_gravity="center_horizontal"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <Button
+                    android:id="@+id/showHideButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="10dp"
+                    android:text="Скрыть меню менеджера"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@drawable/button_style"
+                    android:textColor="@android:color/white" />
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:nestedScrollingEnabled="true"
+                    android:divider="@null" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/colorAccent1"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/menu" />
+
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
